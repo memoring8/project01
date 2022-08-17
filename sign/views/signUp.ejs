@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> signup </title>
+    <link rel="stylesheet" href="/public/css/signUp.css">
+    <script src="">
+        function signUp() {
+            var form = document.getElementById('form_register');
+            axios ({
+                method:'post',
+                url: 'http://localhost:8000/user/signup',
+                data: {
+                user_id: form.id.value,
+                user_name: form.name.value,
+                user_password: form.password_1.value,
+                user_password: form.password_2.value,
+                birth: form.year.value //
+                }
+            })
+            .then((req) => { return req.data;})
+            .then((data) => {
+                alert(data);
+            })
+    }
+    function checkID( obj ){
+        let id = $( obj ).val();
+
+        // axios로 백 가서 확인하기
+    }
+    </script>
+</head>
+<body>
+    <a href="" class="logo">
+        <img src="../public/logo-2.png" alt="" >
+    </a>
+    <!-- sign up form -->
+
+    <form action="/signup" id="form_register" method="post">
+        <label for="id">
+            <div>아이디</div> 
+            <input type="text" name="id" placeholder=" Id" required onkeydown="checkID(this);">
+        </label>
+        <br>
+        <label for="Password_1">
+            <div>비밀번호</div> 
+            <input type="password" name="Password_1" placeholder=" Password" required>
+        </label>
+        <br>
+        <label for="Password_2">
+            <div>비밀번호 재확인</div> 
+            <input type="password" name="Password_2" placeholder=" Password" required>
+        </label>
+        <br>
+        <label for="name">
+            <div>이름</div>
+            <input type="text" name="name" placeholder=" Name" required>
+        </label>
+        <br>
+        <div>생년월일</div>
+        <!-- <table>
+            <tr>
+                <td>
+                    <select>
+                        <option value="1"></option>
+                    </select>년
+                </td>
+                <td style="text-align:center;">
+                    <select>
+                        <option value="1"></option>
+                    </select>월
+                </td>
+                <td style="text-align:right;">
+                    <select>
+                        <option value="1"></option>
+                    </select>일
+                </td>
+            </tr>
+        </table> -->
+
+        <!-- 년,월,일 제외 -->
+        <div class="selects">
+            <label for="year">
+                <select name="year">
+                    <% for (var y =1950; y < 2023; y++) { %>
+                    <option value="<%=y %>년">
+                        <%=y %>년
+                    </option>
+                    <% } %>
+                </select>
+            </label>
+
+            <label for="month">
+                <select name="month">
+                    <% for (var m =1; m < 13; m++) { %>
+                    <option value="<%=m %>월">
+                        <%=m %>월
+                    </option>
+                    <% } %>
+                </select>
+            </label>
+
+            <label for="date">
+                <select name="date">
+                    <% for (var d =1; d < 32; d++) { %>
+                    <option value="<%=d %>일">
+                        <%=d %>일
+                    </option>
+                    <% } %>
+                </select>
+            </label>
+        </div>
+        
+        <button class="btn">가입하기</button>
+    </form>
+
+</body>
+</html>
