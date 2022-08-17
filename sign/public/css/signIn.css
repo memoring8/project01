@@ -1,0 +1,55 @@
+:root {
+    /* color */
+    --white-color: #fff;
+    --blue-color: #0359AE;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 100px 30%;
+
+}
+#form_signIn {
+    margin: auto 30%;
+    
+}
+.btn {
+    border: none;
+    border-radius: 10px;  
+    background-color: #0359AE;
+    color: #fff;
+    width: 100%;
+    height: 30px;
+    margin: 20% auto;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;  
+    margin: 10px auto;
+}
+div {
+    width: 100%;
+    height: 10px;
+    border: none;
+    border-radius: 10px;  
+    margin: 10px auto;
+}
+
+select {
+    width:100/3%;
+    height: 30px;
+    border: none;
+    border-radius: 10px; 
+    margin: 10px auto; 
+}
+
+/* table {
+    width: 100%;
+} */
