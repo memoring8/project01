@@ -16,6 +16,10 @@ app.get('/signin', function(req,res){
     res.render('signIn');
 });
 
+app.get('/', function(req,res){
+    res.render('home')
+})
+
 app.listen(port, ()=>{
     console.log('server port :', port)
 })

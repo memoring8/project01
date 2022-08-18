@@ -2,54 +2,47 @@
     /* color */
     --white-color: #fff;
     --blue-color: #0359AE;
+    --gray-color: #f0f0f0;
 }
 
 body {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
 }
 .logo {
     display: flex;
     justify-content: center;
-    margin: 100px 30%;
+    margin: 100px 0px;
 
 }
 #form_signIn {
-    margin: auto 30%;
-    
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    margin: auto;
 }
 .btn {
     border: none;
     border-radius: 10px;  
     background-color: #0359AE;
     color: #fff;
-    width: 100%;
+    width: 420px;
     height: 30px;
     margin: 20% auto;
 }
 
 input{
-    width: 100%;
+    width: 420px;
     height: 30px;
     border: none;
     border-radius: 10px;  
     margin: 10px auto;
+    background-color: var(--gray-color);
 }
 div {
-    width: 100%;
+    width: 420px;
     height: 10px;
     border: none;
     border-radius: 10px;  
-    margin: 10px auto;
+    margin: 10px 0px;
 }
 
-select {
-    width:100/3%;
-    height: 30px;
-    border: none;
-    border-radius: 10px; 
-    margin: 10px auto; 
-}
-
-/* table {
-    width: 100%;
-} */

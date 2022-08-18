@@ -4,42 +4,27 @@
     <meta charset="UTF-8">
     <title> signin </title>
     <link rel="stylesheet" href="/public/css/signIn.css">
-    <script src="">
-        function signIn() {
-            var form = document.getElementById('form_signIn');
-            axios ({
-                method:'post',
-                url: 'http://localhost:8000/user/signin',
-                data: {
-                user_id: form.id.value,
-                user_password: form.password_1.value,
-                }
-            })
-            .then((req) => { return req.data;})
-            .then((data) => {
-                alert(data);
-            })
-    }
-    </script>
+    <script src="../public/js/signIn.js" defer></script>
 </head>
 <body>
+    <!-- logo -->
     <a href="" class="logo">
-        <img src="../public/logo-2.png" alt="" >
+        <img src="../public/img/logo-2.png" alt="" >
     </a>
     <!-- sign in form -->
     <form action="/signin" id="form_signIn" method="post">
         <label for="id">
             <div>아이디</div> 
-            <input type="text" name="id" placeholder=" Id" required>
+            <input type="text" name="id" placeholder=" Id" required id="id">
         </label>
         <br>
         <label for="Password_1">
             <div>비밀번호</div> 
-            <input type="password" name="Password_1" placeholder=" Password" required>
+            <input type="password" name="Password_1" placeholder=" Password" required id="pw">
         </label>
         <br>
         
-        <button class="btn" onclick="signIn();">로그인</button>
+        <button class="btn">로그인</button>
     </form>
 
 </body>
